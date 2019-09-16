@@ -3,18 +3,21 @@
   <h1 text-center>
     <ion-icon name="logo-foursquare" color="tertiary" class="logo"></ion-icon>
   </h1>
-
+<form [formGroup]="formAuth">
   <ion-item>
     <ion-icon name="mail" color="tertiary" padding slot="end"></ion-icon>
     <!--Define a posição do conteudo (start é antes, end é no final)-->
-    <ion-input name="email" color="tertiary" placeholder="Email"></ion-input>
+    <ion-input name="email" formControlName="email" color="tertiary" placeholder="Email"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-icon name="key" color="tertiary" padding slot="end"></ion-icon>
-    <ion-input name="password" color="tertiary" placeholder="Password"></ion-input>
+    <ion-input name="password" formControlName="password" color="tertiary" placeholder="Password"></ion-input>
   </ion-item>
 
+  <ion-buttom type="submit" expand="block" padding >Login</ion-buttom>
+
+</form>
   <ion-button expand="block" color="tertiary" padding>Login</ion-button>
   <ion-button expand="block" color="tertiary" fill="clear" padding>Register</ion-button>
   <ion-button expand="block" color="tertiary" padding>
